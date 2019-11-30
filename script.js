@@ -6,6 +6,7 @@ const states = '';
 function getStates(){
     $('.request-form').submit(event => {
         event.preventDefault();
+        $('.display-results').show();
         console.log("submitted");
         let url = buildUrl();
         getParks(url);
@@ -48,6 +49,7 @@ function displayResults(responseJson){
 }
 
 function start(){
+    $('.display-results').hide();
     console.log('started');
     getStates();
 }
